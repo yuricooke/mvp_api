@@ -1,0 +1,91 @@
+[2023-09-15 11:15:04,159] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:15:04] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:15:04,166] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:15:04] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:15:04,560] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:15:04] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:15:32,391] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:15:32] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:15:56,918] ERROR log_exception() L1449 Exception on /cor [GET] - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/app.py", line 92, in get_cor
+    cor_id = query.id
+             ^^^^^^^^
+AttributeError: 'CorBuscaSchema' object has no attribute 'id'
+[2023-09-15 11:15:56,927] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:15:56] "[35m[1mGET /cor?nome=Blue HTTP/1.1[0m" 500 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:16:24,637] ERROR log_exception() L1449 Exception on /cor [GET] - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/app.py", line 92, in get_cor
+    cor_id = query.id
+             ^^^^^^^^
+AttributeError: 'CorBuscaSchema' object has no attribute 'id'
+[2023-09-15 11:16:24,646] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:16:24] "[35m[1mGET /cor?nome=Blue HTTP/1.1[0m" 500 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:16:32,682] ERROR log_exception() L1449 Exception on /cor [GET] - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuricooke/Desktop/CANELINHA/app.py", line 92, in get_cor
+    cor_id = query.id
+             ^^^^^^^^
+AttributeError: 'CorBuscaSchema' object has no attribute 'id'
+[2023-09-15 11:16:32,686] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:16:32] "[35m[1mGET /cor?nome=Vermelho HTTP/1.1[0m" 500 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:17:25,737] WARNING del_cor() L133  Erro ao deletar a cor #'Vermelho', Cor não encontrada na base :/ - call_trace=/Users/yuricooke/Desktop/CANELINHA/app.py L133 
+[2023-09-15 11:17:25,741] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:17:25] "[33mDELETE /cor?nome=Vermelho HTTP/1.1[0m" 404 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-15 11:18:14,539] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:18:14] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
