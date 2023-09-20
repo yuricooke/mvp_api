@@ -1,62 +1,45 @@
-[2023-09-15 11:18:47,938] ERROR log_exception() L1449 Exception on /cor [GET] - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py L1449
-Traceback (most recent call last):
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask/app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
-    resp = _do_wrapper(
-           ^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/yuricooke/Desktop/CANELINHA/app.py", line 92, in get_cor
-    cor_id = query.id
-             ^^^^^^^^
-AttributeError: 'CorBuscaSchema' object has no attribute 'id'
-[2023-09-15 11:18:47,943] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:18:47] "[35m[1mGET /cor?nome=Verde HTTP/1.1[0m" 500 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:40,671] INFO _log() L187   * Detected change in '/Users/yuricooke/Desktop/CANELINHA/schemas/cor.py', reloading - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:44,019] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:19:44] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:44,192] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:19:44] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:44,200] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:19:44] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:44,202] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:19:44] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:45,185] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:19:45] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:19:45,278] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:19:45] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:20:11,351] WARNING add_cor() L52   Erro ao adicionar cor'Verde', Cor de mesmo nome já salvo na base :/ - call_trace=/Users/yuricooke/Desktop/CANELINHA/app.py L52  
-[2023-09-15 11:20:11,355] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:20:11] "[31m[1mPOST /cor HTTP/1.1[0m" 409 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:20:30,331] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:20:30] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:20:56,352] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:20:56] "GET /cor?nome=Verde&id=3 HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:21:25,132] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:21:25] "GET /cor?nome=Verde&id=2 HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:21:58,814] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:21:58] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:22:33,813] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:22:33] "GET /cor?id=4 HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:22:48,719] WARNING del_cor() L133  Erro ao deletar a cor #'Vermelho', Cor não encontrada na base :/ - call_trace=/Users/yuricooke/Desktop/CANELINHA/app.py L133 
-[2023-09-15 11:22:48,720] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:22:48] "[33mDELETE /cor?id=4 HTTP/1.1[0m" 404 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:23:03,848] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:23:03] "DELETE /cor?nome=Amarelo&id=4 HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:23:19,314] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:23:19] "DELETE /cor?nome=Branco&id=4 HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:23:52,484] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:23:52] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:24:06,505] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:24:06] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:24:28,186] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:24:28] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:24:40,168] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:24:40] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:24:46,131] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:24:46] "OPTIONS /cor?nome=Turquesa HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:24:46,158] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:24:46] "DELETE /cor?nome=Turquesa HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:25:01,279] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:25:01] "OPTIONS /cor?nome=Blue HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:25:01,293] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:25:01] "DELETE /cor?nome=Blue HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:34:42,271] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:34:42] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:35:18,068] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:35:18] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:35:40,933] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:35:40] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:35:54,556] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:35:54] "POST /cor HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:35:58,583] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:35:58] "OPTIONS /cor?nome=Amarelinho HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:35:58,620] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:35:58] "DELETE /cor?nome=Amarelinho HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:37:23,504] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:37:23] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
-[2023-09-15 11:37:32,890] INFO _log() L187  127.0.0.1 - - [15/Sep/2023 11:37:32] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:01:23,244] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:01:23] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:01:23,281] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:01:23] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:04:00,539] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:04:00] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:04:00,541] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:04:00] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:09:24,308] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:09:24] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:09:24,314] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:09:24] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:09:49,067] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:09:49] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:09:49,071] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:09:49] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:09:57,735] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:09:57] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:09:57,740] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:09:57] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:15:17,897] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:15:17] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:15:17,898] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:15:17] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:16:29,490] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:16:29] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:16:29,492] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:16:29] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:17:05,244] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:17:05] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:17:05,246] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:17:05] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:20:33,933] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:20:33] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:20:33,934] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:20:33] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:21:35,973] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:21:35] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:21:35,982] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:21:35] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:22:10,115] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:22:10] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:22:10,116] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:22:10] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:22:50,440] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:22:50] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:22:50,460] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:22:50] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:24:21,692] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:24:21] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:24:21,693] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:24:21] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:28:14,697] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:28:14] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:28:14,707] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:28:14] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:33:10,215] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:33:10] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:33:10,217] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:33:10] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:33:25,191] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:33:25] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:33:25,192] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:33:25] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:34:23,911] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:34:23] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:34:23,935] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:34:23] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:34:46,944] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:34:46] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:34:46,976] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:34:46] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:35:15,886] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:35:15] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:35:15,889] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:35:15] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:51:07,680] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:51:07] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:51:07,687] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:51:07] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:57:26,288] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:57:26] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 11:57:26,289] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 11:57:26] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 12:01:28,100] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 12:01:28] "GET /cores HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 12:01:28,106] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 12:01:28] "GET /paletas HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 
+[2023-09-20 12:01:32,393] INFO _log() L187  127.0.0.1 - - [20/Sep/2023 12:01:32] "POST /paleta HTTP/1.1" 200 - - call_trace=/Users/yuricooke/Desktop/CANELINHA/env/lib/python3.11/site-packages/werkzeug/_internal.py L187 

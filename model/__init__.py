@@ -6,6 +6,7 @@ import os
 # importando os elementos definidos no modelo
 from model.base import Base
 from model.cor import Cor
+from model.paleta import Paleta
 
 db_path = "database/"
 # Verifica se o diretorio não existe

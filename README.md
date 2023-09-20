@@ -1,4 +1,11 @@
-# Como executar 
+
+# #603010 Gererator
+
+Este pequeno projeto faz parte MVP da sprint **Desenvolvimento Full Stack Básico** 
+
+---
+
+## Como executar 
 
 
 Será necessário ter todas as libs python listadas no `requirements.txt` instaladas.
@@ -26,3 +33,14 @@ automaticamente após uma mudança no código fonte.
 ```
 
 Abra o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador para verificar o status da API em execução.
+
+---
+
+### Autor
+
+Yuri Cooke
+
+Contatos: 
+* e-mail: yuricooke@gmail.com
+* linkedin: [https://www.linkedin.com/in/yuricooke](https://www.linkedin.com/in/yuricooke)
+* Whatsapp: (21) 997.423.956
